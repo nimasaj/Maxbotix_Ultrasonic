@@ -3,7 +3,6 @@ This code is written by Nima Sajedi on 13May2019. It is available at https://git
 */
 #include <SoftwareSerial.h>
 
-#define En_US 4
 #define US_txPin 2      //Ultrasonic | Data pin
 #define US_rxPin 22      //Ultrtasonic | no need to set this pin. if your MCU has pin 22 change to either an unusued or an unavailable pin.
 
