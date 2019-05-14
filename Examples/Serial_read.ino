@@ -46,8 +46,11 @@ uint16_t USgetData(){
     output = serial.read();
     if (output==0x52){ //0x52= "R"
       while (n<no){
-        arr[n]=serial.read();
-        n++;
+        if(serial.available())
+        {
+          arr[n]=serial.read();
+          n++;
+        }
       }
     }
   }
