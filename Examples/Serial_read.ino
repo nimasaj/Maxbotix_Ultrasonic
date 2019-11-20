@@ -41,7 +41,9 @@ uint16_t USgetData(){
 
   serial.flush();
   while (!serial.available()){
-     //blink();
+    serial.listen();
+    delay(2*500);
+    serial.flush();
   }
 
   while(serial.available()){
