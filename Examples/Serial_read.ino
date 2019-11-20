@@ -19,6 +19,7 @@ void loop() {
   uint8_t sn=4;//sample number
   uint16_t AA[sn];
 
+  
   for (uint8_t n=0; n<sn;n++){
     AA[n]=USgetData(); //Measured distance
     Serial.print("AA[");
@@ -38,6 +39,7 @@ uint16_t USgetData(){
   char arr[no];
   uint8_t n=0;
 
+  serial.flush();
   while (!serial.available()){
      //blink();
   }
